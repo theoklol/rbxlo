@@ -1,0 +1,1946 @@
+if game.Players.LocalPlayer.Name ~= "IzIPika" then
+	game.Players.LocalPlayer:Kick("WRONG USERNAME")
+end
+
+if _G.Password ~= "KtLdo3HsI" then
+	game.Players.LocalPlayer:Kick("WRONG PASS")
+end
+
+
+--Removing the noneeds scripts.
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+	if v:IsA("LocalScript") then
+		if game.Lighting:FindFirstChild(v.Name) then
+			v:Remove()
+		end
+	end
+end
+--Turning on Audio and Removeing systems.
+LineTimePS = 0
+lineone = 0
+linetwo = 0
+savedold = 0
+first = false
+enabled = true
+notgoing = true
+--Setups
+--Audio Hit
+	local player = game:GetService("Players").LocalPlayer
+	local A_1 = game.Players.LocalPlayer.Character.Humanoid
+	local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	local A_3 = 0
+	local A_4 = 0.1
+	local A_5 = Vector3.new(0, 0, 0)
+	local A_6 = "rbxassetid://241837157"
+	local A_7 = 0
+	local A_8 = Color3.new(255, 255, 255)
+	local A_9 = "rbxassetid://1"
+	local A_10 = 1
+	local A_11 = 999
+	local Event = game:GetService("ReplicatedStorage").Damage
+	Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+--Removing Effects (Effects dtector thing)
+coroutine.resume(coroutine.create(function()
+	while wait() do
+		coroutine.resume(coroutine.create(function()
+			pcall(function()
+				for i,v in pairs(workspace.Effects:GetChildren()) do
+				coroutine.resume(coroutine.create(function()
+					if v:IsA("Part") then
+						if v.Sound.SoundId == "rbxassetid://2045276365" or v.Sound.SoundId == "rbxassetid://3077287610" or v.Sound.SoundId ==  "rbxassetid://3552355246" or v.Sound.SoundId == "rbxassetid://566593606" then
+							v.Name = "oocool"
+						else
+							print('removed')
+							v:Remove()
+							v:Remove()
+							v:Remove()
+							v:Remove()
+							v:Remove()
+							v:Remove()
+--(Something like saver audio line if something gonna wrong)
+						if savedold < game.Workspace.Effects.oocool.Sound.TimePosition then
+							saved1 = game.Workspace.Effects.oocool.Sound.TimePosition
+							linetwo = game.Workspace.Effects.oocool.Sound.TimePosition
+							saved2 = game.Workspace.Effects.oocool.Sound.TimePosition
+							lineone = game.Workspace.Effects.oocool.Sound.TimePosition
+							print("Saved!", saved1)
+						else
+							print("Old value is more good.")
+						end
+					end
+					end
+				end))
+			end
+			end)
+		end))
+	end
+end))
+--Anim change
+game.Players.LocalPlayer.Character.Stand.StandHumanoidRootPart.StrongPunch.AnimationId = "rbxassetid://3893841692"
+game.Players.LocalPlayer.Character.Stand.StandHumanoidRootPart.Block.AnimationId = "rbxassetid://2876961881"
+game.Players.LocalPlayer.Character.Stand.StandHumanoidRootPart.RightPunch.AnimationId = "rbxassetid://2876963057"
+game.Players.LocalPlayer.Character.Stand.StandHumanoidRootPart.LeftPunch.AnimationId = "rbxassetid://2876963877"
+--game.Players.LocalPlayer.Character.Stand.StandHumanoidRootPart.BloodSuck.AnimationId = "rbxassetid://3675049044"
+--Stat chagne(LOCAL)
+game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Ability.Text = "Neo Shadow The World AU" --Cool name right?
+game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Ability.Ability:Remove()
+game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Durability.Durability:Remove()
+local copying = game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Durability:Clone()
+	copying.Parent = game.Players
+game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Durability:Remove()
+game.Players.Durability.Name = "lolwhatisit"
+local okaywrongsry = game.Players.lolwhatisit:Clone()
+	okaywrongsry.Parent = game.Players.LocalPlayer.PlayerGui.MenuGUI.Background
+game.Players.lolwhatisit:Remove()
+local label = game.Players.LocalPlayer:WaitForChild("PlayerGui").MenuGUI.Background.lolwhatisit
+	label.MouseEnter:Connect(function()
+		label.Text = "?"
+	end)
+	
+	label.MouseLeave:Connect(function()
+		label.Text = "Durability"
+		end)
+		game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Power.Power:Remove()
+local copying = game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Power:Clone()
+	copying.Parent = game.Players
+game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Power:Remove()
+game.Players.Power.Name = "lolwhatisit2"
+local okaywrongsry = game.Players.lolwhatisit2:Clone()
+	okaywrongsry.Parent = game.Players.LocalPlayer.PlayerGui.MenuGUI.Background
+game.Players.lolwhatisit2:Remove()
+local label = game.Players.LocalPlayer:WaitForChild("PlayerGui").MenuGUI.Background.lolwhatisit2
+	label.MouseEnter:Connect(function()
+		label.Text = "?"
+	end)
+	
+	label.MouseLeave:Connect(function()
+		label.Text = "Destructive Power"
+		end)
+		game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Speed.Speed:Remove()
+local copying = game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Speed:Clone()
+copying.Parent = game.Players
+game.Players.LocalPlayer.PlayerGui.MenuGUI.Background.Speed:Remove()
+game.Players.Speed.Name = "lolwhatisit3"
+local okaywrongsry = game.Players.lolwhatisit3:Clone()
+okaywrongsry.Parent = game.Players.LocalPlayer.PlayerGui.MenuGUI.Background
+game.Players.lolwhatisit3:Remove()
+local label = game.Players.LocalPlayer:WaitForChild("PlayerGui").MenuGUI.Background.lolwhatisit3
+	label.MouseEnter:Connect(function()
+		label.Text = "A"
+	end)
+	
+	label.MouseLeave:Connect(function()
+		label.Text = "Speed"
+end)
+
+--Setup Reference's
+
+local rstor = game:GetService("ReplicatedStorage");
+local l__Velocity__2 = rstor.Velocity;
+local l__LocalPlayer__3 = game:GetService("Players").LocalPlayer;
+local chr = l__LocalPlayer__3.Character;
+local human = chr.Humanoid;
+mouse = l__LocalPlayer__3:GetMouse();
+cam = workspace.CurrentCamera;
+local stand = chr:WaitForChild("Stand");
+local rot = stand:WaitForChild("StandHumanoidRootPart");
+local SH = stand:WaitForChild("Stand Head");
+local ST = stand:WaitForChild("Stand Torso");
+local replicatedstorage = game:GetService("ReplicatedStorage")
+local standevent = replicatedstorage.Stand
+local damageevent = replicatedstorage.Damage
+local trailevent = replicatedstorage.Trail
+local punchsfx = rot.Punch
+local strongpunchevent = replicatedstorage.StrongPunch
+local transparencyevent = replicatedstorage.Transparency
+local strongpunchanim = human:LoadAnimation(rot.StrongPunch)
+local timestopevent = replicatedstorage.Timestop
+local untimestopevent = replicatedstorage.Untimestop
+local knifeevent = replicatedstorage.TWAUKnife
+local blockevent = replicatedstorage.Block
+local blockanim = human:LoadAnimation(rot.Block)
+local rightpunchanim = human:LoadAnimation(rot.RightPunch)
+local leftpunchanim = human:LoadAnimation(rot.LeftPunch)
+local activu = false;
+local u2 = false;
+local u3 = false;
+local u4 = human:LoadAnimation(rot.Nothing);
+local u5 = human:LoadAnimation(rot.Idle);
+local l__StandAppear__6 = rot.StandAppear;
+local l__Transparency__7 = rstor.Transparency;
+local l__face__8 = SH:WaitForChild("face");
+local UPPERANIM = rot.Pose1:Clone()
+	UPPERANIM.Parent = chr
+chr.Pose1.Name = "UpAnim"
+chr.UpAnim.AnimationId = "rbxassetid://3893397364"
+uppercutanim = human:LoadAnimation(chr.UpAnim)
+local kna = rot.Pose1:Clone()
+	kna.Parent = chr
+chr.Pose1.Name = "knanim1"
+chr.knanim1.AnimationId = "rbxassetid://3445785160"
+local kna2 = rot.Pose1:Clone()
+	kna2.Parent = chr
+chr.Pose1.Name = "knanim2"
+chr.knanim2.AnimationId = "rbxassetid://3894577205"
+local RTZ = rot.Pose1:Clone()
+	RTZ.Parent = chr
+chr.Pose1.Name = "RTZAnim"
+chr.RTZAnim.AnimationId = "rbxassetid://3923101279"
+local FDUBS = rot.Pose1:Clone()
+	FDUBS.Parent = chr
+chr.Pose1.Name = "FleshBuds"
+chr.FleshBuds.AnimationId = "rbxassetid://3923038092"
+local bsa = rot.Pose1:Clone()
+	bsa.Parent = chr
+chr.Pose1.Name = "BloodSuck"
+chr.BloodSuck.AnimationId = "rbxassetid://3675049044"
+local bloodsuckanim = human:LoadAnimation(chr.BloodSuck)
+uppercutanim = human:LoadAnimation(chr.UpAnim)
+local knifeanim = human:LoadAnimation(chr.knanim1)
+local knifeanim2 = human:LoadAnimation(chr.knanim2)
+local RTZAnim = human:LoadAnimation(chr.RTZAnim)
+local fleshanim = human:LoadAnimation(chr.FleshBuds)
+local l__HumanoidRootPart__40 = chr.HumanoidRootPart;
+
+--Removing LEGS n pose music(Looks more like neo stw)
+
+stand["Stand Right Leg"]:Remove()
+stand["Stand Left Leg"]:Remove()
+chr.Torso.PoseMusic:Remove()
+
+--FUNCTIONS (WARNING DO NOT CHANGE ANYTHING IF U DON'T KNOW WHAT U DO!)
+
+function standappear(p1)
+	if activu == true then
+		return;
+	end;
+	if u2 == true then
+		return;
+	end;
+	u2 = true;
+	if u3 == false then
+		u3 = true;
+		u4:Stop();
+		u5:Play(0.2, 1, 1);
+		l__StandAppear__6:Play();
+		local v16, v17, v18 = pairs(p1:GetChildren());
+		while true do
+			local v19, v20 = v16(v17, v18);
+			if v19 then
+
+			else
+				break;
+			end;
+			v18 = v19;
+			coroutine.resume(coroutine.create(function()
+				local v21 = 1 - 1;
+				while true do
+					if v20 ~= rot then
+						if v20.ClassName ~= "Sound" then
+							if v20 ~= p1.StandSRA then
+								if v20 ~= p1.StandLarm then
+									if v20.ClassName ~= "IntValue" then
+										wait();
+										l__Transparency__7:FireServer(v20, v20.Transparency - 0.2);
+										l__Transparency__7:FireServer(l__face__8, v20.Transparency - 0.2);
+									end;
+								end;
+							end;
+						end;
+					end;
+					if 0 <= 1 then
+						if v21 < 5 then
+
+						else
+							break;
+						end;
+					elseif 5 < v21 then
+
+					else
+						break;
+					end;
+					v21 = v21 + 1;				
+				end;
+				if v20 ~= rot then
+					if v20 ~= p1.StandSRA then
+						if v20 ~= p1.StandLarm then
+							l__Transparency__7:FireServer(v20, 0);
+							l__Transparency__7:FireServer(l__face__8, 0);
+						end;
+					end;
+				end;
+			end));		
+		end;
+		wait(1)
+		local trsevent = game.ReplicatedStorage.Transparency
+local lp = game.Players.LocalPlayer
+local chr = lp.Character
+local hrp = chr.HumanoidRootPart
+local stand = chr.Stand
+	elseif u3 == true then
+		u3 = false;
+		u5:Stop();
+		u4:Play(0.2, 1, 1);
+		local v22, v23, v24 = pairs(p1:GetChildren());
+		while true do
+			local v25, v26 = v22(v23, v24);
+			if v25 then
+
+			else
+				break;
+			end;
+			v24 = v25;
+			coroutine.resume(coroutine.create(function()
+				local v27 = 1 - 1;
+				while true do
+					if v26 ~= rot then
+						if v26.ClassName ~= "Sound" then
+							if v26 ~= p1.StandSRA then
+								if v26 ~= p1.StandLarm then
+									if v26.ClassName ~= "IntValue" then
+										wait();
+										l__Transparency__7:FireServer(v26, v26.Transparency + 0.2);
+										l__Transparency__7:FireServer(l__face__8, v26.Transparency + 0.2);
+									end;
+								end;
+							end;
+						end;
+					end;
+					if 0 <= 1 then
+						if v27 < 5 then
+
+						else
+							break;
+						end;
+					elseif 5 < v27 then
+
+					else
+						break;
+					end;
+					v27 = v27 + 1;				
+				end;
+				if v26 ~= rot then
+					if v26 ~= p1.StandSRA then
+						if v26 ~= p1.StandLarm then
+							l__Transparency__7:FireServer(v26, 1);
+							l__Transparency__7:FireServer(l__face__8, 1);
+						end;
+					end;
+				end;
+			end));		
+		end;
+	end;
+	wait(2.5);
+	u2 = false;
+end;
+--Ref
+local u9 = false;
+local l__Rush__10 = rot.Rush;
+local attackpose = human:LoadAnimation(rot.AttackPose);
+local l__Trail__12 = rstor.Trail;
+local SRA = stand:WaitForChild("Stand Right Arm");
+local SLA = stand:WaitForChild("Stand Left Arm");
+local activu6 = 0;
+local disabled = chr:WaitForChild("Disabled");
+local chopcd = false;
+local l__Chop__63 = rot.Chop;
+local chopanim = human:LoadAnimation(rot.ChopC);
+--FUNCTION
+function chopcombo()
+	if activu == true then
+		return;
+	end;
+	if chopcd == true then
+		return;
+	end;
+	activu = true;
+	chopcd = true;
+	local player = game:GetService("Players").LocalPlayer
+	local A_1 = game.Players.LocalPlayer.Character.Humanoid
+	local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	local A_3 = 0
+	local A_4 = 0
+	local A_5 = Vector3.new(0, 0, 0)
+	local A_6 = "rbxassetid://241837157"
+	local A_7 = 0
+	local A_8 = Color3.new(255, 255, 255)
+	local A_9 = "rbxassetid://3077287610"
+	local A_10 = 1
+	local A_11 = 999
+	local Event = game:GetService("ReplicatedStorage").Damage
+	Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+	if game.Lighting.TS.Value == false then
+		game.Lighting.STWEffect.Enabled = true
+		spawn(function()
+			wait(.4)
+			game.Lighting.STWEffect.Enabled = false
+		end)
+	end
+	local player = game:GetService("Players").LocalPlayer
+	local A_1 = game.Players.LocalPlayer.Character.Humanoid
+	local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	local A_3 = 0
+	local A_4 = 0
+	local A_5 = Vector3.new(0, 0, 0)
+	local A_6 = "rbxassetid://241837157"
+	local A_7 = 0
+	local A_8 = Color3.new(255, 255, 255)
+	local A_9 = "rbxassetid://3552355246"
+	local A_10 = 1
+	local A_11 = 10
+	local Event = game:GetService("ReplicatedStorage").Damage
+	Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+	for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 3 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency - 0.1)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 0.6)
+	        end
+	      end))
+		end
+	attackpose:Play()
+	activu = true
+	human.JumpPower = 0
+	chopanim:Play(0.1, 1, 1)
+	trailevent:FireServer(SRA.Trail, true)
+	trailevent:FireServer(SRA.Trail, true);
+	wait(0.13);
+	coroutine.resume(coroutine.create(function()
+		for _ = 1,20 do
+			wait()
+			hito2STW(SRA, SRA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)), 3, 23, 0.35, 0.25, rot.CFrame.lookVector * 1, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255), "rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 10);	
+		end;
+	end));
+	wait(0.13);
+	coroutine.resume(coroutine.create(function()
+		for _ = 1,15 do
+			wait()
+			hito2STW(SLA, SLA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)), 3, 23, 0.35, 0.25, rot.CFrame.lookVector * 1, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255), "rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 10);	
+		end;
+	end));
+	wait(0.13);
+	strongpunchevent:FireServer(Vector3.new(1, 0.5, 1), Vector3.new(0.3, 0.15, 0.3), BrickColor.new("Pastel Blue"));
+	coroutine.resume(coroutine.create(function()
+		for _ = 1,15 do
+			wait()
+			hito2STW(SRA, SRA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)), 3, 38, 0.75, 0.25, rot.CFrame.lookVector * 10, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255), "rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 10);		
+		end;
+	end));
+	wait(0.475);
+	trailevent:FireServer(SRA.Trail, false);
+	wait(0.45)
+	activu = false
+	attackpose:Stop()
+	human.JumpPower = 50
+	for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 6 do
+	           if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency + 0.9)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 1)
+	        end
+	      end))
+		end
+		trailevent:FireServer(SRA.Trail, false)
+chopanim:Stop()		
+	wait(2.5)
+	chopcd = false
+end
+--Setup
+local bloodsuckcd = false
+--FUNCTION BLOODSUCK
+function bloodsuck()
+	if activu == true then return end
+	if bloodsuckcd == true then return end
+	bloodsuckcd = true
+	activu = true
+	human.JumpPower = 0
+	bloodsuckanim:Play(0.1, 1, 1)
+	wait(0.5)
+	punchsfx:Play()
+	coroutine.resume(coroutine.create(function()
+		for _ = 1, 10 do
+			wait()
+			hito3STW(SRA, 6.5, 30, 0.5, 0.25, rot.CFrame.lookVector * 0)
+		end
+	end))
+	wait(0.65)
+		activu = false
+	wait(3)
+	bloodsuckcd = false
+end
+--Ref n Setup
+local EHMMM = 0
+local blockcooldown = false
+--FUNCTION BLOCK
+function block()
+	if blockcooldown == true then return end
+	if activu == true then return end
+	activu = true
+	local player = game:GetService("Players").LocalPlayer
+	local A_1 = game.Players.LocalPlayer.Character.Humanoid
+	local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	local A_3 = 0
+	local A_4 = 0
+	local A_5 = Vector3.new(0, 0, 0)
+	local A_6 = "rbxassetid://241837157"
+	local A_7 = 0
+	local A_8 = Color3.new(255, 255, 255)
+	local A_9 = "rbxassetid://3552355246"
+	local A_10 = 1
+	local A_11 = 10
+	local Event = game:GetService("ReplicatedStorage").Damage
+	Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 5 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency - 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 0.6)
+	        end
+	      end))
+		end
+	local bep = true
+	local de = mouse.KeyUp:connect(function(key)
+	    if key == "x" then
+	      bep = false
+	    end
+	end)
+	blockanim:Play(0.1, 1,1)
+	blockevent:FireServer(true)
+	blockcooldown = true
+	human.JumpPower = 0
+	repeat
+		wait()
+	until bep == false
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 8 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency + 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 1)
+	        end
+	      end))
+		end
+	blockevent:FireServer(false)
+	blockanim:Stop(0.1)
+	human.JumpPower = 50
+	activu = false
+	wait(3)
+	blockcooldown = false	
+end
+--Setups
+local u31 = false;
+local u32 = human:LoadAnimation(rot.RightPunch);
+local u33 = human:LoadAnimation(rot.LeftPunch);
+--FUNCTION Punch
+function punch()
+	if activu == true then
+		return;
+	end;
+	if u3 == false then
+		return;
+	end;
+	activu = true;
+	l__Punch__23:Play();
+	attackpose:Play();
+	human.JumpPower = 0;
+	if u31 == false then
+		u31 = true;
+		u32:Play(0.1, 1, 1);
+		l__Trail__12:FireServer(SRA.Trail, true);
+		wait(0.2);
+		coroutine.resume(coroutine.create(function()
+			local v32 = 1 - 1;
+			while true do
+				wait();
+				hito(SRA, SRA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)), 2.5, 11, 0.5, 0.25, rot.CFrame.lookVector * 10, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255), "rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 25);
+				if 0 <= 1 then
+					if v32 < 5 then
+
+					else
+						break;
+					end;
+				elseif 5 < v32 then
+
+				else
+					break;
+				end;
+				v32 = v32 + 1;			
+			end;
+		end));
+	elseif u31 == true then
+		u31 = false;
+		u33:Play(0.1, 1, 1);
+		l__Trail__12:FireServer(SLA.Trail, true);
+		wait(0.2);
+		coroutine.resume(coroutine.create(function()
+			local v33 = 1 - 1;
+			while true do
+				wait();
+				hito(SLA, SLA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)), 2.5, 11, 0.5, 0.25, rot.CFrame.lookVector * 10, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255), "rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 25);
+				if 0 <= 1 then
+					if v33 < 5 then
+
+					else
+						break;
+					end;
+				elseif 5 < v33 then
+
+				else
+					break;
+				end;
+				v33 = v33 + 1;			
+			end;
+		end));
+	end;
+	wait(0.3);
+	attackpose:Stop();
+	human.JumpPower = 50;
+	activu = false;
+	l__Trail__12:FireServer(SRA.Trail, false);
+	l__Trail__12:FireServer(SLA.Trail, false);
+end;
+local btrapcd = false;
+local btrap = rstor.BearTrap;
+local mouse2 = game.Players.LocalPlayer:GetMouse();
+function beartrap()
+	if activu == true then
+		return;
+	end;
+	if btrapcd == true then
+		return;
+	end;
+		btrapcd = true;
+		btrap:FireServer(mouse2.Hit);
+		btrap:FireServer(mouse2.Hit);
+		btrap:FireServer(mouse2.Hit);
+		wait(10);
+		btrapcd = false;
+end;
+--Ref
+local leftorright = false
+--FUNCTION Punch(Here some fixes
+function punch()
+if activu == true then return end
+	activu = true
+	punchsfx:Play()
+	attackpose:Play()
+	local player = game:GetService("Players").LocalPlayer
+	local A_1 = game.Players.LocalPlayer.Character.Humanoid
+	local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	local A_3 = 0
+	local A_4 = 0
+	local A_5 = Vector3.new(0, 0, 0)
+	local A_6 = "rbxassetid://241837157"
+	local A_7 = 0
+	local A_8 = Color3.new(255, 255, 255)
+	local A_9 = "rbxassetid://3552355246"
+	local A_10 = 1
+	local A_11 = 6
+	local Event = game:GetService("ReplicatedStorage").Damage
+	Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 5 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency - 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 0.6)
+	        end
+	      end))
+		end
+	human.JumpPower = 0
+	if leftorright == false then
+		leftorright = true
+		rightpunchanim:Play(0.1, 1, 1)
+		trailevent:FireServer(SRA.Trail, true)
+		wait(0.2)
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 3 do
+	           if n ~= rot and n.ClassName ~= "Sound" and n ~= stand["Stand Head"] then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency + 0.2)
+	          end
+	        end
+	        if n ~= rot and n ~= stand["Stand Head"] then
+	          transparencyevent:FireServer(n, 1)
+	        end
+	      end))
+		end			
+		coroutine.resume(coroutine.create(function()
+		for _ = 1, 5 do
+		wait()
+		hitoSTW(SRA, SRA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)) ,2.5, 11, 0.5, 0.25, rot.CFrame.lookVector * 10, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255),"rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 25)
+		end
+		end))
+	elseif leftorright == true then
+		leftorright = false
+		leftpunchanim:Play(0.1, 1, 1)
+		trailevent:FireServer(SLA.Trail, true)
+		wait(0.2)
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 3 do
+	           if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency + 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 1)
+	        end
+	      end))
+		end			
+		coroutine.resume(coroutine.create(function()
+		for _ = 1, 5 do
+		wait()
+		hito(SLA, SLA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)) ,2.5, 11, 0.5, 0.25, rot.CFrame.lookVector * 10, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255),"rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 25)
+		end
+		end))
+	end
+	wait(0.35)
+	attackpose:Stop()
+	human.JumpPower = 50
+	activu = false
+	trailevent:FireServer(SRA.Trail, false)
+	trailevent:FireServer(SLA.Trail, false)
+end
+--Ref n Setup
+local ShadowTheWorldRTZ = replicatedstorage.STWRTZ
+local RTZSTW = false
+local RTZCool = 0
+--FUNCTION STWRTZ
+function STWRTZ()
+	if activu == true then return end
+	if RTZSTW == false then 
+	RTZAnim:Play(0.1,1,1)
+	human.JumpPower = 0
+	human.WalkSpeed = 0
+	ShadowTheWorldRTZ:FireServer(true)
+	print("stwrtz has been made true.")
+	wait(1.5)
+	RTZSTW = true
+	human.HealthChanged:connect(function()
+	if RTZSTW == false then return end
+		hitoSTWRTZ()
+		RTZSTW = false
+		human.JumpPower = 50
+		human.WalkSpeed = 18
+		RTZAnim:Stop(0.1)
+	end)
+	elseif RTZSTW == true then
+		RTZAnim:Stop(0.1)
+		ShadowTheWorldRTZ:FireServer(false)
+		print("stwrtz has been made false.")
+		human.JumpPower = 50
+		human.WalkSpeed = 18
+		RTZCool = 0
+		activu = false
+		wait(1.5)
+		RTZSTW = false
+	end
+end
+--Ref
+local strongpunchcooldown = false
+--FUNCTION strongpunch
+function strongpunch()
+if activu == true then return end
+if strongpunchcooldown == true then return end
+	activu = true
+	strongpunchcooldown = true
+	attackpose:Play()
+	local player = game:GetService("Players").LocalPlayer
+	local A_1 = game.Players.LocalPlayer.Character.Humanoid
+	local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	local A_3 = 0
+	local A_4 = 0
+	local A_5 = Vector3.new(0, 0, 0)
+	local A_6 = "rbxassetid://241837157"
+	local A_7 = 0
+	local A_8 = Color3.new(255, 255, 255)
+	local A_9 = "rbxassetid://3077287610"
+	local A_10 = 1
+	local A_11 = 999
+	local Event = game:GetService("ReplicatedStorage").Damage
+	Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+	if game.Lighting.TS.Value == false then
+		game.Lighting.STWEffect.Enabled = true
+		spawn(function()
+			wait(.7)
+			game.Lighting.STWEffect.Enabled = false
+		end)
+	end
+	local player = game:GetService("Players").LocalPlayer
+	local A_1 = game.Players.LocalPlayer.Character.Humanoid
+	local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	local A_3 = 0
+	local A_4 = 0
+	local A_5 = Vector3.new(0, 0, 0)
+	local A_6 = "rbxassetid://241837157"
+	local A_7 = 0
+	local A_8 = Color3.new(255, 255, 255)
+	local A_9 = "rbxassetid://3552355246"
+	local A_10 = 1
+	local A_11 = 10
+	local Event = game:GetService("ReplicatedStorage").Damage
+	Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 5 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency - 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 0.6)
+	        end
+	      end))
+		end
+	human.JumpPower = 0
+	strongpunchanim:Play(0.1, 1, 1)
+	trailevent:FireServer(SRA.Trail, true)
+	coroutine.resume(coroutine.create(function()
+	for _ = 1, 20 do
+		wait()
+		hitoSTW(SRA, SRA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)) ,2, 13, 0.2, 0.25, rot.CFrame.lookVector * 2.5, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255),"rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 50)
+		hitoSTW(SLA, SLA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)) ,2, 13, 0.2, 0.25, rot.CFrame.lookVector * 2.5, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255),"rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 50)
+	end
+	end))
+	wait(0.5)
+	strongpunchevent:FireServer(Vector3.new(1, 0.5, 1), Vector3.new(0.3, 0.15, 0.3), BrickColor.new("Pastel Blue"))
+	wait(.5)
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 6 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency + 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 1)
+	        end
+	      end))
+		end
+	trailevent:FireServer(SRA.Trail, false)
+	attackpose:Stop()
+	human.JumpPower = 50
+	activu = false
+	wait(5)
+	strongpunchcooldown = false
+end	
+--Ref
+local fleshbudscooldown = false
+--FUNCTION fleshbuds
+function fleshbuds()
+	if activu == true then return end
+	if fleshbudscooldown == true then return end
+	activu = true
+	fleshbudscooldown = true
+	human.WalkSpeed = 0
+	human.JumpPower = 0
+	fleshanim:Play(0.5,9,1)
+	human.WalkSpeed = 18
+	human.JumpPower = 50
+	for _ = 1, 5 do
+		wait(0.3)
+		hitoflesh()
+	end
+	wait(0.5)
+	human.WalkSpeed = 18
+	human.JumpPower = 50
+	fleshanim:Stop(0.5,8,1)
+	activu = false
+	wait(5)
+	fleshbudscooldown = false
+end
+--Ref
+local knifecooldown = false
+--FUNCTION knifethrow
+function knifethrow()
+if activu == true then return end
+if knifecooldown == true then return end
+	if game.Lighting.TS.Value == false then
+		knifecooldown = true
+		activu = true
+		knifeanim:Play(0.1, 1, 1)
+		transparencyevent:FireServer(chr.HoldTWAUKnife:GetChildren(), 0, true)
+		wait(0.5)
+		spawn(function()
+			knifeevent:FireServer()
+			punchsfx:Play()
+		end)
+		transparencyevent:FireServer(chr.HoldTWAUKnife:GetChildren(), 1, false)
+		wait(0.5)
+		activu = false
+		if chr.TS.Value == false then
+		wait(1)
+		knifecooldown = false
+		elseif chr.TS.Value == true then
+		knifecooldown = false
+		end
+	else
+		knifecooldown = true
+		activu = true
+		knifeanim2:Play(0.1, 1, 1)
+
+		local player = game:GetService("Players").LocalPlayer
+		local A_1 = game.Players.LocalPlayer.Character.Humanoid
+		local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		local A_3 = 0
+		local A_4 = 0
+		local A_5 = Vector3.new(0, 0, 0)
+		local A_6 = "rbxassetid://241837157"
+		local A_7 = 0
+		local A_8 = Color3.new(255, 255, 255)
+		local A_9 = "rbxassetid://3552355246"
+		local A_10 = 1
+		local A_11 = 10
+		local Event = game:GetService("ReplicatedStorage").Damage
+		Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 5 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency - 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 0.6)
+	        end
+	      end))
+		end
+		transparencyevent:FireServer(chr.HoldTWAUKnife:GetChildren(), 1, false)
+		wait(0.1)
+		knifeevent:FireServer()
+		wait(0.1)
+		punchsfx:Play()
+		knifeevent:FireServer()
+		wait(0.1)
+		activu = false
+		knifeevent:FireServer()
+		wait(0.1)
+		knifeevent:FireServer()
+		wait(0.1)
+		knifeevent:FireServer()
+		punchsfx:Play()
+		transparencyevent:FireServer(chr.HoldTWAUKnife:GetChildren(), 1, false)
+		wait(0.5)
+		activu = false
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 5 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency + 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 1)
+	        end
+	      end))
+		end
+		if chr.TS.Value == false then
+		wait(1.5)
+		knifecooldown = false
+		elseif chr.TS.Value == true then
+		knifecooldown = false
+		end
+	end
+end
+--Ref n Setups
+local plr = game:GetService("Players").LocalPlayer
+mouse = plr:GetMouse()
+local tsteleportcooldown = false
+--FUNCTION tsteleport
+function tsteleport()
+	if activu == true then return end
+	if tsteleportcooldown == true then return end
+	local location = mouse.Hit.p
+	if (chr.HumanoidRootPart.Position - location).magnitude < 35 then
+		tsteleportcooldown = true
+		chr.HumanoidRootPart.CFrame = CFrame.new(location) + Vector3.new(0,2,0)
+		local player = game:GetService("Players").LocalPlayer
+		local A_1 = game.Players.LocalPlayer.Character.Humanoid
+		local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		local A_3 = 0
+		local A_4 = 0
+		local A_5 = Vector3.new(0, 0, 0)
+		local A_6 = "rbxassetid://241837157"
+		local A_7 = 0
+		local A_8 = Color3.new(255, 255, 255)
+		local A_9 = "rbxassetid://3077287610"
+		local A_10 = 1
+		local A_11 = 999
+		local Event = game:GetService("ReplicatedStorage").Damage
+		Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+		if game.Lighting.TS.Value == false then
+			game.Lighting.STWEffect.Enabled = true
+			spawn(function()
+				wait(.2)
+				game.Lighting.STWEffect.Enabled = false
+			end)
+		end
+		wait(5)
+		tsteleportcooldown = false
+	end
+end
+--Ref n Setups
+local u52 = false;
+--local u53 = human:LoadAnimation(rot.SpaceRipper);
+--local l__StingyEyes__54 = rot.StingyEyes;
+local l__SpaceRipperStingyEyes__55 = rstor.SpaceRipperStingyEyes;
+--FUNCTION spaceripperstingyeyes
+function spaceripperstingyeyes()
+	if u52 == true then
+		return;
+	end;
+	if activu == true then
+		return;
+	end;
+	if game.Lighting.TS.Value == false then
+	activu = true;
+	u52 = true;
+	u53:Play(0.1, 1, 1);
+	wait(0.6);
+	l__StingyEyes__54:Play();
+	print("1 eye")
+	l__SpaceRipperStingyEyes__55:FireServer();
+	wait(0.3);
+	activu = false;
+	else
+	activu = true;
+	u52 = true;
+	u53:Play(0.1, 1, 1);
+	wait(0.6);
+	l__StingyEyes__54:Play();
+	print("6 eyes")
+	l__SpaceRipperStingyEyes__55:FireServer();
+	l__SpaceRipperStingyEyes__55:FireServer();
+	l__SpaceRipperStingyEyes__55:FireServer();
+	l__SpaceRipperStingyEyes__55:FireServer();
+	l__SpaceRipperStingyEyes__55:FireServer();
+	l__SpaceRipperStingyEyes__55:FireServer();
+	wait(0.3);
+	activu = false;
+	end
+	wait(7.5);
+	u52 = false
+end;
+--Ref
+local u9 = false;
+local l__Rush__10 = rot.Rush;
+local attackpose = human:LoadAnimation(rot.AttackPose);
+local l__Trail__12 = rstor.Trail;
+local SRA = stand:WaitForChild("Stand Right Arm");
+local SLA = stand:WaitForChild("Stand Left Arm");
+local activu5 = human:LoadAnimation(rot.PunchBarrage);
+local activu6 = 0;
+local disabled = chr:WaitForChild("Disabled");
+--FUNCTION
+function uppercut()
+	if activu == true then
+		return;
+	end;
+	if u9 == true then
+		return;
+	end;
+	u9 = true
+	local player = game:GetService("Players").LocalPlayer
+	local A_1 = game.Players.LocalPlayer.Character.Humanoid
+	local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	local A_3 = 0
+	local A_4 = 0
+	local A_5 = Vector3.new(0, 0, 0)
+	local A_6 = "rbxassetid://241837157"
+	local A_7 = 0
+	local A_8 = Color3.new(255, 255, 255)
+	local A_9 = "rbxassetid://3077287610"
+	local A_10 = 1
+	local A_11 = 999
+	local Event = game:GetService("ReplicatedStorage").Damage
+	Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+	if game.Lighting.TS.Value == false then
+		game.Lighting.STWEffect.Enabled = true
+		spawn(function()
+			wait(.4)
+			game.Lighting.STWEffect.Enabled = false
+		end)
+	end
+	local player = game:GetService("Players").LocalPlayer
+	local A_1 = game.Players.LocalPlayer.Character.Humanoid
+	local A_2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	local A_3 = 0
+	local A_4 = 0
+	local A_5 = Vector3.new(0, 0, 0)
+	local A_6 = "rbxassetid://241837157"
+	local A_7 = 0
+	local A_8 = Color3.new(255, 255, 255)
+	local A_9 = "rbxassetid://3552355246"
+	local A_10 = 1
+	local A_11 = 10
+	local Event = game:GetService("ReplicatedStorage").Damage
+	Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+	for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 3 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency - 0.1)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 0.6)
+	        end
+	      end))
+		end
+	attackpose:Play()
+	activu = true
+	human.JumpPower = 0
+	uppercutanim:Play(0.1, 1, 1)
+	trailevent:FireServer(SRA.Trail, true)
+	strongpunchevent:FireServer(Vector3.new(.5, 0.5, .5), Vector3.new(0.3, 0.15, 0.3), BrickColor.new("Pastel Blue"))
+	coroutine.resume(coroutine.create(function()
+	for _ = 1, 15 do
+		wait()
+		hito2STW(SRA, SRA.CFrame * CFrame.new(0, -1, 0) * CFrame.new(math.random(-0.25, 0.25), math.random(-0.25, 0.25), math.random(-0.25, 0.25)) ,3, 30, 0.75, 0.25, rot.CFrame.lookVector * 50, "rbxassetid://241837157", 0.075, Color3.new(255, 255, 255),"rbxassetid://260430079", math.random(9, 11) / 10, math.random(9, 11) / 10)
+	end
+	end))
+	wait(0.65)
+	activu = false
+	attackpose:Stop()
+	human.JumpPower = 50
+	for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 6 do
+	           if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency + 0.9)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 1)
+	        end
+	      end))
+		end
+		trailevent:FireServer(SRA.Trail, false)
+uppercutanim:Stop()		
+	wait(2.5)
+	u9 = false
+end
+--Ref n Setups
+local SH = stand:WaitForChild("Stand Head");
+local ST = stand:WaitForChild("Stand Torso");
+local SRA = stand:WaitForChild("Stand Right Arm");
+local SLA = stand:WaitForChild("Stand Left Arm");
+local l__Torso__79 = chr.Torso;
+local u86 = chr["Right Arm"];
+local u87 = chr["Left Arm"];
+local u88 = chr["Right Leg"];
+local u89 = chr["Left Leg"];
+local l__Head__69 = chr.Head;
+lol = false
+local l__Anchor__85 = replicatedstorage.Anchor;
+timestopcooldown = false
+--FUNCTION timestop
+function timestop()
+lol = false
+if activu == true then return end
+if game.Lighting.TS.Value == true then return end
+if game.Lighting.TSing.Value == true then return end
+if game.Lighting.TS.Value == true then return end
+	activu = true
+	timestopcooldown = true
+	activu = false
+	timestopevent:FireServer(5, "ShadowDio")
+	spawn(function()
+	repeat
+	wait()
+	l__Anchor__85:FireServer(ST, false);
+		l__Anchor__85:FireServer(SRA, false);
+		l__Anchor__85:FireServer(SLA, false);
+		l__Anchor__85:FireServer(SH, false);
+		l__Anchor__85:FireServer(l__Torso__79, false);
+		l__Anchor__85:FireServer(u86, false);
+		l__Anchor__85:FireServer(u87, false);
+		l__Anchor__85:FireServer(u88, false);
+		l__Anchor__85:FireServer(u89, false);
+		l__Anchor__85:FireServer(l__Head__69, false);
+		until lol == true
+		end)
+	human.WalkSpeed = 18
+	human.JumpPower = 50
+		wait(5)
+		lol = true
+		untimestopevent:FireServer()
+	wait(25)
+	timestopcooldown = false
+end
+--FUNCTION untimestop
+function untimestop()
+	l__Untimestop__59:FireServer();
+end;
+--Ref n Setups
+enabled = false
+local posing = false;
+local u61 = human:LoadAnimation(rot.Pose1);
+local u62 = human:LoadAnimation(rot.Pose2);
+local l__Menacing__63 = rstor.Menacing;
+local posing = false
+--FUNCTION posefunc
+function posefunc()
+if activu == false and posing == false then
+	if posing == false then do
+	activu = true
+			for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 5 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency - 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 0.6)
+	        end
+	      end))
+		end
+			activu = true;
+				u61:Play(0.1, 1, 1);
+				spawn(function()
+					wait(1.5);
+					u61:Stop();
+					u62:Play();
+					rot.Theme:Play()
+				end)
+				human.WalkSpeed = 0;
+				human.JumpPower = 0;
+				wait(1.5);
+				posing = true;
+				l__Menacing__63:FireServer(true);
+				return;
+			end;
+		elseif posing == true then
+		for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 7 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency + 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 1)
+	        end
+	      end))
+		end
+			u61:Stop(0.3);
+			u62:Stop(0.3);
+			rot.Theme:Stop()
+			if disabled.Value == false then
+				human.WalkSpeed = 16;
+				human.JumpPower = 50;
+			elseif disabled.Value == true then
+				human.WalkSpeed = 4;
+				human.JumpPower = 10;
+			end;
+			activu = false;
+			posing = false;
+			l__Menacing__63:FireServer(false);
+		end;
+	elseif posing == true then
+	for _, n in pairs(stand:GetChildren()) do
+	      coroutine.resume(coroutine.create(function()
+	        for _ = 1, 7 do
+	          if n ~= rot and n.ClassName ~= "Sound" then
+	            wait()
+	            transparencyevent:FireServer(n, n.Transparency + 0.2)
+	          end
+	        end
+	        if n ~= rot then
+	          transparencyevent:FireServer(n, 1)
+	        end
+	      end))
+		end
+		u61:Stop(0.3);
+		u62:Stop(0.3);
+		rot.Theme:Stop()
+		enabled = false
+		if disabled.Value == false then
+			human.WalkSpeed = 16;
+			human.JumpPower = 50;
+		elseif disabled.Value == true then
+			human.WalkSpeed = 4;
+			human.JumpPower = 10;
+		end;
+		activu = false;
+		posing = false;
+		l__Menacing__63:FireServer(false);
+	end;
+end;
+--Ref n Setup
+local u37 = false;
+local u38 = human:LoadAnimation(rot.GunFire);
+local l__Revolver__39 = rstor.Revolver;
+local l__Guard__23 = rot.Guard;
+local l__Gun__40 = rot.Gun;
+--FUNCTION pistol
+function pistol()
+	if activu == true then
+		return;
+	end;
+	if u37 == true then
+		return;
+	end;
+	u37 = true;
+	activu = true;
+	if game.Lighting.TS.Value == false then
+	transparencyevent:FireServer(chr.Gun2, 0);
+	u38:Play(0.1, 1, 1);
+	l__Guard__23:Play();
+	wait(0.3);
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	wait(0.7);
+	transparencyevent:FireServer(chr.Gun2, 1);
+	activu = false;
+	wait(2);
+	u37 = false;
+	else
+	transparencyevent:FireServer(chr.Gun2, 0);
+	u38:Play(0.1, 1, 1);
+	l__Guard__23:Play();
+	wait(0.3);
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	l__Revolver__39:FireServer();
+	l__Gun__40:Play();
+	wait(0.7);
+	transparencyevent:FireServer(chr.Gun2, 1);
+	activu = false;
+	wait(6);
+	u37 = false;
+	end
+end;
+--Ref n Setups
+dodgecooldown = false;
+local u64 = human:LoadAnimation(rot.Roll);
+local l__Dodge__65 = rot.Dodge;
+local l__Dodge__66 = rstor.Dodge;
+--FUNCTION dodge
+function dodge()
+	if activu == true then
+		return;
+	end;
+	if dodgecooldown == true then
+		return;
+	end;
+	activu = true;
+	dodgecooldown = true;
+	u64:Play();
+	l__Dodge__65:Play();
+	l__Dodge__66:FireServer();
+	local v37 = Instance.new("BodyVelocity");
+	v37.MaxForce = Vector3.new(100000, 0, 100000);
+	v37.P = math.huge;
+	v37.Velocity = l__HumanoidRootPart__40.CFrame.lookVector * 50;
+	v37.Parent = chr.HumanoidRootPart;
+	game.Debris:AddItem(v37, 0.25);
+	wait(0.4);
+	activu = false;
+	wait(3);
+	dodgecooldown = false;
+end;
+--Ref n Setups
+local u67 = false;
+local l__Taunt__68 = rstor.Taunt;
+local l__Head__69 = chr.Head;
+--FUNCTION taunt
+function taunt()
+	if u67 == true then
+		return;
+	end;
+	u67 = true;
+	local v38 = math.random(1, 2);
+	if v38 == 1 then
+		l__Taunt__68:FireServer(l__Head__69, "rbxassetid://4577516140", 4, 5.2, 0);
+		return;
+	end;
+	if v38 == 2 then
+		l__Taunt__68:FireServer(l__Head__69, "rbxassetid://4577531054", 4, 5.2, 0);
+		return;
+	end;
+end;
+
+--SETUP BINDS
+
+local l__Torso__79 = chr.Torso;
+mouse.Button1Down:connect(function()
+	if l__Torso__79.Anchored == true then
+		return;
+	end;
+	if disabled.Value == true then
+		return;
+	end;
+	punch();
+end);
+mouse.KeyDown:connect(function(p4)
+	if l__Torso__79.Anchored == true then
+		return;
+	end;
+	if disabled.Value == true then
+		return;
+	end;
+	if p4 == "e" then
+		chopcombo();
+	end;
+	if p4 == "r" then
+		strongpunch();
+	end;
+	if p4 == "t" then
+		knifethrow();
+	end;
+	if p4 == "y" then
+		pistol();
+	end;
+	if p4 == "b" then
+		fleshbuds();
+	end;
+	if p4 == "j" then
+		beartrap();
+	end;
+	if p4 == "h" then
+		uppercut();
+	end;
+	if p4 == "x" then
+		block();
+	end;
+	if p4 == "f" then
+		if game.Lighting.TS.Value == false then
+			timestop();
+		elseif game.Lighting.TS.Value == true then
+			untimestop();
+		end;
+	end;
+	if p4 == "v" then
+		tsteleport();
+	end;
+	if p4 == "c" then
+		dodge();
+	end;
+	if p4 == "q" then
+		bloodsuck();
+	end;
+	if p4 == "g" then
+		posefunc();
+	end;
+	if p4 == "n" then
+		taunt();
+	end;
+end);
+
+--SETS HITS
+
+function hitoflesh()
+local chr = game.Players.LocalPlayer.Character
+for _, guy in pairs(workspace.Entities:GetChildren()) do
+	if guy:FindFirstChild("Humanoid") then
+			if guy:FindFirstChild("HumanoidRootPart") then
+				if guy ~= chr then
+					if (guy:FindFirstChild("HumanoidRootPart").Position - game:GetService("Players").LocalPlayer.character.Head.Position).magnitude < 4.4 then
+						if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+							local human0 = guy:FindFirstChild("Humanoid");
+							print(guy)
+							local A_1 = human0
+							local A_2 = guy:FindFirstChild("HumanoidRootPart").CFrame
+							local A_3 = 25
+							local A_4 = 0.2
+							local A_5 = Vector3.new(0, 0, 0)
+							local A_6 = "rbxassetid://241837157"
+							local A_7 = 0
+							local A_8 = Color3.new(255, 255, 255)
+							local A_9 = "rbxassetid://566593606"
+							local A_10 = 1
+							local A_11 = 999
+							local Event = game:GetService("ReplicatedStorage").Damage
+							Event:FireServer(A_1, A_2, A_3, A_4, A_5, A_6, A_7, A_8, A_9, A_10, A_11)
+						end
+					end
+				end
+			end
+		end
+	end
+end
+function hitoSTWRTZ()
+local chr = game.Players.LocalPlayer.Character
+for _, guy in pairs(workspace.Entities:GetChildren()) do
+	if guy:FindFirstChild("Humanoid") then
+			if guy:FindFirstChild("HumanoidRootPart") then
+				if guy ~= chr then
+					if (guy:FindFirstChild("HumanoidRootPart").Position - game:GetService("Players").LocalPlayer.character.Torso.Position).magnitude < 7.4 then
+						if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+							local human0 = guy:FindFirstChild("Humanoid");
+							print(guy)
+							game.ReplicatedStorage.Knock:FireServer(human0)
+							game.ReplicatedStorage.Berserk:FireServer(human0)
+						end
+					end
+				end
+			end
+		end
+	end
+end
+local l__Damage__80 = rstor.Damage;
+function hito(p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17)
+	if disabled.Value == true then
+		return;
+	end;
+	for _, guy in pairs(workspace.Entities:GetChildren()) do
+		if p5.Anchored == true then
+			return;
+		end;
+		if guy:FindFirstChild("Humanoid") then
+			if guy:FindFirstChild("HumanoidRootPart") then
+				if guy ~= chr then
+					if (guy:FindFirstChild("HumanoidRootPart").Position - p5.Position).magnitude < p7 then
+						if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+							if p5.Anchored then
+								return;
+							end;
+							local l__HumanoidRootPart__54 = guy:FindFirstChild("HumanoidRootPart");
+							l__Damage__80:FireServer(guy:FindFirstChild("Humanoid"), p6, p8, p10, p11, p12, p13, p14, p15, p16, p17);
+							local v55 = Instance.new("StringValue");
+							v55.Name = "alabo";
+							v55.Parent = l__HumanoidRootPart__54;
+							delay(p9, function()
+								v55:Destroy();
+							end);
+						end;
+					end;
+				end;
+			end;
+		end;
+		if guy:FindFirstChild("Stand") then
+			if guy.Stand:FindFirstChild("Stand Torso") then
+				if guy ~= chr then
+					if guy ~= chr[stand.Name] then
+						if (guy.Stand:FindFirstChild("Stand Torso").Position - p5.Position).magnitude < p7 then
+							if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+								if p5.Anchored then
+									return;
+								end;
+								local l__HumanoidRootPart__56 = guy:FindFirstChild("HumanoidRootPart");
+								l__Damage__80:FireServer(guy:FindFirstChild("Humanoid"), p6, p8, p10, p11, p12, p13, p14, p15, p16, p17);
+								local v57 = Instance.new("StringValue");
+								v57.Name = "alabo";
+								v57.Parent = l__HumanoidRootPart__56;
+								delay(p9, function()
+									v57:Destroy();
+								end);
+							end;
+						end;
+					end;
+				end;
+			end;
+		end;	
+	end;
+end;
+local l__Damage__74 = rstor.Damage;
+function hitoSTW(p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16)
+	if disabled.Value == true then
+		return;
+	end;
+	for _, guy in pairs(workspace.Entities:GetChildren()) do
+		if p4.Anchored == true then
+			return;
+		end;
+		if guy:FindFirstChild("Humanoid") then
+			if guy:FindFirstChild("HumanoidRootPart") then
+				if guy ~= chr then
+					if (guy:FindFirstChild("HumanoidRootPart").Position - p4.Position).magnitude < p6 then
+						if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+							if p4.Anchored then
+								return;
+							end;
+							local l__HumanoidRootPart__141 = guy:FindFirstChild("HumanoidRootPart");
+							damageevent:FireServer(guy:FindFirstChild("Humanoid"), p5, p7, p9, p10, p11, p12, p13, p14, p15, p16);
+							local v142 = Instance.new("StringValue");
+							v142.Name = "alabo";
+							v142.Parent = l__HumanoidRootPart__141;
+							delay(p8, function()
+								v142:Destroy();
+							end);
+						end;
+					end;
+				end;
+			end;
+		end;
+		if guy:FindFirstChild("Stand") then
+			if guy.Stand:FindFirstChild("Stand Torso") then
+				if guy ~= chr then
+					if guy ~= chr[stand.Name] then
+						if (guy.Stand:FindFirstChild("Stand Torso").Position - p4.Position).magnitude < p6 then
+							if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+								if p4.Anchored then
+									return;
+								end;
+								local l__HumanoidRootPart__143 = guy:FindFirstChild("HumanoidRootPart");
+								l__Damage__74:FireServer(guy:FindFirstChild("Humanoid"), p5, p7, p9, p10, p11, p12, p13, p14, p15, p16);
+								local v144 = Instance.new("StringValue");
+								v144.Name = "alabo";
+								v144.Parent = l__HumanoidRootPart__143;
+								delay(p8, function()
+									v144:Destroy();
+								end);
+							end;
+						end;
+					end;
+				end;
+			end;
+		end;	
+	end;
+end;
+local l__Knock__75 = rstor.Knock;
+function hito2STW(p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29)
+	if disabled.Value == true then
+		return;
+	end;
+	for _, guy in pairs(workspace.Entities:GetChildren()) do
+		if p17.Anchored == true then
+			return;
+		end;
+		if guy:FindFirstChild("Humanoid") then
+			if guy:FindFirstChild("HumanoidRootPart") then
+				if guy ~= chr then
+					if (guy:FindFirstChild("HumanoidRootPart").Position - p17.Position).magnitude < p19 then
+						if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+							if p17.Anchored then
+								return;
+							end;
+							local l__Humanoid__150 = guy:FindFirstChild("Humanoid");
+							local l__HumanoidRootPart__151 = guy:FindFirstChild("HumanoidRootPart");
+							damageevent:FireServer(l__Humanoid__150, p18, p20, p22, p23, p24, p25, p26, p27, p28, p29);
+							l__Knock__75:FireServer(l__Humanoid__150);
+							local v152 = Instance.new("StringValue");
+							v152.Name = "alabo";
+							v152.Parent = l__HumanoidRootPart__151;
+							delay(p21, function()
+								v152:Destroy();
+							end);
+						end;
+					end;
+				end;
+			end;
+		end;
+		if guy:FindFirstChild("Stand") then
+			if guy.Stand:FindFirstChild("Stand Torso") then
+				if guy ~= chr then
+					if guy ~= chr[stand.Name] then
+						if (guy.Stand:FindFirstChild("Stand Torso").Position - p17.Position).magnitude < p19 then
+							if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+								if p17.Anchored then
+									return;
+								end;
+								local l__Humanoid__153 = guy:FindFirstChild("Humanoid");
+								local l__HumanoidRootPart__154 = guy:FindFirstChild("HumanoidRootPart");
+								damageevent:FireServer(l__Humanoid__153, p18, p20, p22, p23, p24, p25, p26, p27, p28, p29);
+								l__Knock__75:FireServer(l__Humanoid__153);
+								local v155 = Instance.new("StringValue");
+								v155.Name = "alabo";
+								v155.Parent = l__HumanoidRootPart__154;
+								delay(p21, function()
+									v155:Destroy();
+								end);
+							end;
+						end;
+					end;
+				end;
+			end;
+		end;	
+	end;
+end;
+local l__VampireDamage__76 = replicatedstorage.VampireDamage;
+function hito3STW(p30, p31, p32, p33, p34, p35, p36)
+	for _, guy in pairs(workspace.Entities:GetChildren()) do
+		if p30.Anchored == true then
+			return;
+		end;
+		if guy:FindFirstChild("Humanoid") then
+			if guy:FindFirstChild("HumanoidRootPart") then
+				if guy ~= chr then
+					if (guy:FindFirstChild("HumanoidRootPart").Position - p30.Position).magnitude < p31 then
+						if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+							if p30.Anchored then
+								return;
+							end;
+							local l__Humanoid__161 = guy:FindFirstChild("Humanoid");
+							local l__HumanoidRootPart__162 = guy:FindFirstChild("HumanoidRootPart");
+							l__VampireDamage__76:FireServer(l__Humanoid__161, p32, p34, p35, p36);
+							l__Knock__75:FireServer(l__Humanoid__161);
+							local v163 = Instance.new("StringValue");
+							v163.Name = "alabo";
+							v163.Parent = l__HumanoidRootPart__162;
+							delay(p33, function()
+								v163:Destroy();
+							end);
+						end;
+					end;
+				end;
+			end;
+		end;	
+	end;
+end;
+local l__Knock__81 = rstor.Knock;
+function hito2(p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30)
+	if disabled.Value == true then
+		return;
+	end;
+	for _, guy in pairs(workspace.Entities:GetChildren()) do
+		if p18.Anchored == true then
+			return;
+		end;
+		if guy:FindFirstChild("Humanoid") then
+			if guy:FindFirstChild("HumanoidRootPart") then
+				if guy ~= chr then
+					if (guy:FindFirstChild("HumanoidRootPart").Position - p18.Position).magnitude < p20 then
+						if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+							if p18.Anchored then
+								return;
+							end;
+							local human3 = guy:FindFirstChild("Humanoid");
+							local l__HumanoidRootPart__64 = guy:FindFirstChild("HumanoidRootPart");
+							l__Damage__80:FireServer(human3, p19, p21, p23, p24, p25, p26, p27, p28, p29, p30);
+							l__Knock__81:FireServer(human3);
+							local v65 = Instance.new("StringValue");
+							v65.Name = "alabo";
+							v65.Parent = l__HumanoidRootPart__64;
+							delay(p22, function()
+								v65:Destroy();
+							end);
+						end;
+					end;
+				end;
+			end;
+		end;
+		if guy:FindFirstChild("Stand") then
+			if guy.Stand:FindFirstChild("Stand Torso") then
+				if guy ~= chr then
+					if guy ~= chr[stand.Name] then
+						if (guy.Stand:FindFirstChild("Stand Torso").Position - p18.Position).magnitude < p20 then
+							if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+								if p18.Anchored then
+									return;
+								end;
+								local human6 = guy:FindFirstChild("Humanoid");
+								local l__HumanoidRootPart__67 = guy:FindFirstChild("HumanoidRootPart");
+								l__Damage__80:FireServer(human6, p19, p21, p23, p24, p25, p26, p27, p28, p29, p30);
+								l__Knock__81:FireServer(human6);
+								local v68 = Instance.new("StringValue");
+								v68.Name = "alabo";
+								v68.Parent = l__HumanoidRootPart__67;
+								delay(p22, function()
+									v68:Destroy();
+								end);
+							end;
+						end;
+					end;
+				end;
+			end;
+		end;	
+	end;
+end;
+local l__VampireDamage__82 = rstor.VampireDamage;
+function hito3(p31, p32, p33, p34, p35, p36, p37)
+	for _, guy in pairs(workspace.Entities:GetChildren()) do
+		if p31.Anchored == true then
+			return;
+		end;
+		if guy:FindFirstChild("Humanoid") then
+			if guy:FindFirstChild("HumanoidRootPart") then
+				if guy ~= chr then
+					if (guy:FindFirstChild("HumanoidRootPart").Position - p31.Position).magnitude < p32 then
+						if guy:FindFirstChild("HumanoidRootPart"):FindFirstChild("alabo") == nil then
+							if p31.Anchored then
+								return;
+							end;
+							local l__Humanoid__74 = guy:FindFirstChild("Humanoid");
+							local l__HumanoidRootPart__75 = guy:FindFirstChild("HumanoidRootPart");
+							l__VampireDamage__82:FireServer(l__Humanoid__74, p33, p35, p36, p37);
+							l__Knock__81:FireServer(l__Humanoid__74);
+							local v76 = Instance.new("StringValue");
+							v76.Name = "alabo";
+							v76.Parent = l__HumanoidRootPart__75;
+							delay(p34, function()
+								v76:Destroy();
+							end);
+						end;
+					end;
+				end;
+			end;
+		end;	
+	end;
+end;
+
+--STAND SETTINGS
+
+local l__Anchor__85 = rstor.Anchor;
+local u86 = chr["Right Arm"];
+local u87 = chr["Left Arm"];
+local u88 = chr["Right Leg"];
+local u89 = chr["Left Leg"];
+game.Lighting.TS.Changed:Connect(function()
+	if game.Lighting.TS.Value == true then
+		if u39 == true then
+			return;
+		else
+			l__Anchor__85:FireServer(ST, true);
+			l__Anchor__85:FireServer(SRA, true);
+			l__Anchor__85:FireServer(SLA, true);
+			l__Anchor__85:FireServer(SRL, true);
+			l__Anchor__85:FireServer(SLL, true);
+			l__Anchor__85:FireServer(SH, true);
+			l__Anchor__85:FireServer(l__Torso__79, true);
+			l__Anchor__85:FireServer(u86, true);
+			l__Anchor__85:FireServer(u87, true);
+			l__Anchor__85:FireServer(u88, true);
+			l__Anchor__85:FireServer(u89, true);
+			l__Anchor__85:FireServer(l__Head__69, true);
+			return;
+		end;
+	end;
+	if game.Lighting.TS.Value == false then
+		l__Anchor__85:FireServer(ST, false);
+		l__Anchor__85:FireServer(SRA, false);
+		l__Anchor__85:FireServer(SLA, false);
+		l__Anchor__85:FireServer(SH, false);
+		l__Anchor__85:FireServer(l__Torso__79, false);
+		l__Anchor__85:FireServer(u86, false);
+		l__Anchor__85:FireServer(u87, false);
+		l__Anchor__85:FireServer(u88, false);
+		l__Anchor__85:FireServer(u89, false);
+		l__Anchor__85:FireServer(l__Head__69, false);
+	end;
+end);
+if game.Lighting.TS.Value == true then
+	l__Anchor__85:FireServer(ST, true);
+	l__Anchor__85:FireServer(SRA, true);
+	l__Anchor__85:FireServer(SLA, true);
+	l__Anchor__85:FireServer(SRL, true);
+	l__Anchor__85:FireServer(SLL, true);
+	l__Anchor__85:FireServer(SH, true);
+	l__Anchor__85:FireServer(l__Torso__79, true);
+	l__Anchor__85:FireServer(u86, true);
+	l__Anchor__85:FireServer(u87, true);
+	l__Anchor__85:FireServer(u88, true);
+	l__Anchor__85:FireServer(u89, true);
+	l__Anchor__85:FireServer(l__Head__69, true);
+end;
+rstor.BerserkClient.OnClientEvent:connect(function()
+	game.Lighting.Ambient = Color3.fromRGB(0, 0, 122);
+	game.Lighting.Berserk.Enabled = true;
+	human.WalkSpeed = 4;
+	human:SetStateEnabled(3, false);
+	wait(2.5);
+	human.WalkSpeed = 16;
+	human:SetStateEnabled(3, true);
+	game.Lighting.Ambient = Color3.fromRGB(150, 150, 150);
+	game.Lighting.Berserk.Enabled = false;
+end);
+local l__Die__90 = rot.Die;
+local l__Death__91 = rstor.Death;
+human.HealthChanged:connect(function()
+	if human.Health < 1 then
+		for v96, v97 in pairs(stand:GetChildren()) do
+			coroutine.resume(coroutine.create(function()
+				for v98 = 1, 5 do
+					if v97 ~= rot and v97.ClassName ~= "Sound" then
+						wait();
+						l__Transparency__7:FireServer(v97, v97.Transparency + 0.2);
+						l__Transparency__7:FireServer(l__face__8, v97.Transparency + 0.2);
+					end;
+				end;
+				if v97 ~= rot then
+					l__Transparency__7:FireServer(v97, 1);
+					l__Transparency__7:FireServer(l__face__8, 1);
+				end;
+			end));
+		end;
+		human:SetStateEnabled(3, false);
+		human:SetStateEnabled(15, false);
+		l__Die__90:Play();
+		l__Death__91:FireServer(false);
+	end;
+end);
+local l__Knocked__92 = rstor.Knocked;
+local l__GetUp__93 = rstor.GetUp;
+rstor.KnockClient.OnClientEvent:connect(function(p51)
+	if chr.Block.Value == true then
+		return;
+	end;
+	l__Knocked__92:FireServer();
+	human:SetStateEnabled(3, false);
+	wait(1.25);
+	if human.Health >= 1 then
+		l__GetUp__93:FireServer();
+		human:SetStateEnabled(3, true);
+	end;
+end);
+l__Taunt__68.OnClientEvent:Connect(function()
+	u67 = false;
+end);
+l__VampireDamage__82.OnClientEvent:Connect(function()
+	v14:Play(0.1, 1, 1);
+	u25 = true;
+	activu = true;
+	bloodsuckanim:Play();
+	wait(2);
+	v14:Stop(0.2);
+	activu = false;
+	human.JumpPower = 50;
+	l__Trail__12:FireServer(stand.StandRarm.Trail, false);
+	u25 = false;
+end);
+wait(60);
+u56 = false;
+wait(120);
+u70 = false;
